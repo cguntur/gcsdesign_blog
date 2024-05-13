@@ -5,13 +5,15 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
+    "start": "nodemon . & npm run scss",
+    "scss": "sass --watch public/scss/style.scss public/css/style.css",
     "seed": "node seeds/seed.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.1.1",
+    "compile-sass": "^2.0.0",
     "connect-session": "^0.0.1",
     "connect-session-sequelize": "^7.1.7",
     "dotenv": "^16.4.5",
@@ -19,6 +21,8 @@
     "express-handlebars": "^7.1.2",
     "express-session": "^1.18.0",
     "mysql2": "^3.9.7",
+    "nodemon": "^3.1.0",
+    "sass": "^1.77.1",
     "sequelize": "^6.37.3"
   }
 }
