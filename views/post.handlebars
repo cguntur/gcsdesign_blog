@@ -1,0 +1,38 @@
+<div class="text-center">
+  <h2>{{title}}</h2>
+  <p>{{format_date date_created}}</p>
+  <p class="show_post_content">{{post_content}}</p>
+
+  <form id="edit_post_form" name="edit_post" class="form hide">
+    <textarea name="edit_post_content" id="edit_post_content">
+      {{post_content}}
+    </textarea>
+    <input type="hidden" name="current_post_id" id="current_post_id" value="{{id}}">
+    <br />
+    <button type="submit" id="update_post" class="btn btn-primary">Update Post</button>
+  </form>
+
+  <p>Created by {{user.name}} </p>
+
+  {{#user_can_edit user.id logged_in_user_id}}
+    <button id="edit_post_btn" class="btn btn-primary" name="edit_post">Edit Post</button>
+  {{/user_can_edit}}
+
+  {{#if comments}}
+    {{#each comments as |comment| }}
+      <p>{{comment.comment_content}} by <span>{{user.name}}</span></p>
+    {{/each}}
+  {{/if}}
+</div>
+
+<div class="comment_box">
+  <form class="add_new_comment" id="add_new_comment">
+    <div class="form_field">
+      <label for="post_content">Add Comment</label>
+      <textarea class="form-control" id="comment_content" rows="3" placeholder="Enter your comment"></textarea>
+      <input type="hidden" name="post_id" id="comment_post_id" value="{{id}}">
+    </div>
+    <button type="submit" class="btn btn-primary">Add Comment</button>
+    
+  </form>
+</div>

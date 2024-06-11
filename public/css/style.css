@@ -1,0 +1,116 @@
+/* Variables */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+body {
+  background: #E8E0CE;
+  font-family: "Montserrat", sans-serif;
+}
+
+a {
+  color: #D4303D;
+}
+
+h1 {
+  color: #0D0D0D;
+}
+h1 a {
+  text-decoration: none;
+  color: #0D0D0D;
+}
+
+.container {
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+p {
+  padding: 5px 0px;
+}
+
+.btn-primary {
+  border: #0F6926 1px solid;
+  padding: 10px;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 5px;
+  background: #D4303D;
+}
+
+header {
+  background-color: #D9B573;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+header nav {
+  display: flex;
+  justify-content: center;
+}
+header nav li {
+  list-style-type: none;
+  padding: 0px 10px;
+  margin-top: 20px;
+}
+header nav li a {
+  text-decoration: none;
+  color: #D4303D;
+}
+
+main {
+  margin-top: 30px;
+}
+main .login_sections {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.post_list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.post_list .post {
+  max-width: 300px;
+  min-width: 300px;
+  padding: 20px;
+}
+
+form {
+  margin-top: 30px;
+}
+form .form_field {
+  margin: 10px 0px;
+  display: flex;
+  align-items: top;
+  flex-direction: row;
+}
+form .form_field .add_new_comment {
+  flex-direction: column;
+}
+form .form_field label {
+  font-size: 18px;
+  font-weight: 500;
+  width: 150px;
+  display: inline-block;
+}
+form .form_field input, form .form_field textarea {
+  width: 200px;
+  border: #0F6926 1px solid;
+  border-radius: 5px;
+  padding: 10px 5px;
+}
+
+/*# sourceMappingURL=style.css.map */

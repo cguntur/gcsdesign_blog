@@ -1,0 +1,33 @@
+<div class="dashboard">
+  <h2>Hi, {{name}}</h2>
+  <p>Logged in User ID: {{logged_in_user_id}}</p>
+  <p>Welcome to your dashboard! You will be able to add a new post using the form here. </p>
+
+  <div class="post_list">
+    {{#each posts as |post| }}
+    <div class="post">
+      <h2>
+        <a href="/post/{{post.id}}">{{post.title}}</a>
+      </h2>
+      {{!--<p class="date">{{format_date post.date_created}}</p>--}}
+      <div class="post_content">
+        {{post.post_content}}
+      </div>
+    </div>
+      
+    {{/each}}
+  </div>
+
+  <button class="btn btn-primary" id="add_new_post_btn">Add a New Post</button>
+  <form class="add_new_post hide" id="add_new_post">
+    <div class="form_field">
+      <label for="title">Title</label>
+      <input type="text" class="form-control" id="title" placeholder="Enter post title">
+    </div>
+    <div class="form_field">
+      <label for="post_content">Post Content</label>
+      <textarea class="form-control" id="post_content" rows="3" placeholder="Enter post content"></textarea>
+    </div>
+      <button type="submit" class="btn btn-primary">Add Post</button>
+  </form>
+</div><!--dashboard-->

@@ -1,0 +1,135 @@
+/* Variables */
+$bck_color: #E8E0CE;
+$sec_bck_color: #D4303D;
+$header_bck_color: #D9B573;
+$txt_color: #0D0D0D;
+$link_color: #D4303D;
+$accent_color: #0F6926;
+$white: #fff;
+
+$body_font: "Montserrat", sans-serif;
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.hide{
+    display:none;
+}
+
+.show{
+    display: block;
+}
+
+body{
+    background: $bck-color;
+    font-family: $body_font;
+}
+
+a{
+    color: $link_color;
+}
+
+h1{
+    color: $txt_color;
+
+    a{
+        text-decoration: none;
+        color: $txt_color;
+    }
+}
+
+.container{
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+p{
+    padding: 5px 0px;
+}
+
+.btn-primary{
+    border: $accent_color 1px solid;
+    padding: 10px;
+    color: $white;
+    font-size: 16px;
+    border-radius: 5px;
+    background: $sec_bck_color;
+}
+header{
+    background-color: $header_bck_color;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+
+    nav{
+        display: flex;
+        justify-content: center;
+
+        li{
+            list-style-type: none;
+            padding: 0px 10px;
+            margin-top: 20px;
+
+            a{
+                text-decoration: none;
+                color: $link_color;
+            }
+        }
+    }
+}
+
+main{
+    margin-top: 30px; 
+
+    .login_sections{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+}
+
+.post_list{
+    display: flex;
+    flex-wrap: wrap;
+
+    .post{
+        max-width: 300px;
+        min-width: 300px;
+        padding: 20px;
+    }
+}
+
+form{
+    margin-top: 30px;
+
+    .form_field{
+        margin: 10px 0px;
+        display: flex;
+        align-items: top;
+        flex-direction: row;
+
+        & .add_new_comment{
+            flex-direction: column;;
+        }
+
+        label{
+            font-size: 18px;
+            font-weight: 500;
+            width: 150px;
+            display: inline-block;
+        }
+
+        input, textarea{
+            width: 200px;
+            border: $accent_color 1px solid;
+            border-radius: 5px;
+            padding: 10px 5px;
+        }
+    }
+
+    
+}
