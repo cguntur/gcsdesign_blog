@@ -29,7 +29,7 @@
   {{#if comments}}
     <div class="comments">
       {{#each comments as |comment| }}
-        <p>{{comment.comment_content}} by <span>{{user.name}}</span></p>
+        <p>{{comment.comment_content}} by <span>{{user.name}} on {{format_date comment.date_created}}</span></p>
       {{/each}}
     </div>
     
