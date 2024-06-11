@@ -104,5 +104,31 @@ if(document.getElementById('edit_post_btn')){
         }
     }
     editPostFormEl.addEventListener('submit', updatePost);
+}
 
+
+if(document.getElementById('delete_post_btn')){
+    console.log("Delete button exists");
+    var deletePostButtonEl = document.querySelector('#delete_post_btn');
+
+    const id = parseInt(deletePostButtonEl.getAttribute('data-id'));
+
+    async function deletePost(event){
+        if (confirm('Are you sure you want to delete this post?')) {
+            console.log("Post ID: " + id);
+            const response = await fetch(`/api/posts/${id}`, {
+                method: 'DELETE',
+              });
+          
+              if (response.ok) {
+                document.location.replace('/dashboard');
+              } else {
+                alert('Failed to delete project');
+              }
+        }else{
+            return;
+        }
+    }
+    
+    deletePostButtonEl.addEventListener('click', deletePost);
 }

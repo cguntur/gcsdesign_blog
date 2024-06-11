@@ -57,6 +57,11 @@ p{
     font-size: 16px;
     border-radius: 5px;
     background: $sec_bck_color;
+
+    &.alert{
+        background: $white;
+        color: $sec_bck_color;
+    }
 }
 header{
     background-color: $header_bck_color;
@@ -103,6 +108,25 @@ main{
     }
 }
 
+.post{
+    padding-top: 30px;
+    padding-bottom: 50px;
+
+    textarea{
+        min-height: 150px;
+        min-width: 600px;
+    }
+}
+
+.post_actions{
+    margin-bottom: 30px;
+}
+
+.comments{
+    padding-bottom: 20px;
+    border-bottom: 1px $accent_color dashed;
+}
+
 form{
     margin-top: 30px;
 
@@ -112,7 +136,7 @@ form{
         align-items: top;
         flex-direction: row;
 
-        & .add_new_comment{
+        & .add_new_comment, &.column{
             flex-direction: column;;
         }
 
